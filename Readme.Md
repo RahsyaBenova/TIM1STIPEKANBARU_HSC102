@@ -2,6 +2,10 @@
 
 Aplikasi edukatif berbasis **web** (Streamlit) yang terhubung dengan **ESP32** dan **ESP32-CAM** untuk pembelajaran sensor, aktuator, serta pemrograman mikrokontroler secara interaktif.
 
+<p align="center">
+  <img src="assets/tampilan_awal.png" alt="Tampilan Awal Web EduKit" width="700"/>
+</p>
+
 ---
 
 ## 📚 Fitur Aplikasi Web (Streamlit)
