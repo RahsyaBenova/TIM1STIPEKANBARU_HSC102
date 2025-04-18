@@ -1,0 +1,8 @@
+streamlit
+requests
+opencv-python
+numpy
+inference-sdk
+gTTS
+pygame
+google-generativeai
