@@ -6,3 +6,5 @@ inference-sdk
 gTTS
 pygame
 google-generativeai
+pymongo
+bcrypt
