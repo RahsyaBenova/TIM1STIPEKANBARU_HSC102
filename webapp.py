@@ -1,4 +1,6 @@
 import streamlit as st
+
+# Impor semua halaman
 from halaman_led import halaman_led
 from halaman_upload import halaman_upload_file
 from halaman_dht11 import halaman_dht11
@@ -18,13 +20,24 @@ from halaman_tilt import halaman_tilt
 from halaman_ds18s20 import halaman_ds18s20
 from halaman_tsop1838 import halaman_tsop1838
 from halaman_tcrt5000 import halaman_tcrt5000
+from halaman_login import halaman_login
+from halaman_quiz import halaman_quiz  
+from halaman_history_quiz import halaman_history_quiz
 
 # Konfigurasi halaman
 st.set_page_config(page_title="EduKit Web App", page_icon="💡", layout="centered")
 
+# Inisialisasi session state login
+if "is_logged_in" not in st.session_state:
+    st.session_state.is_logged_in = False
+if "user_data" not in st.session_state:
+    st.session_state.user_data = {}
+
 # Sidebar navigasi
 st.sidebar.title("📚 Menu Navigasi")
-menu = st.sidebar.radio("Pilih Halaman", [
+
+# Menu umum
+menu_items = [
     "📤 halaman_kit_esp32",
     "🔎 Penjelasan LED", 
     "🌡 Penjelasan DHT11", 
@@ -43,13 +56,21 @@ menu = st.sidebar.radio("Pilih Halaman", [
     "📡 Penjelasan TCR5000",
     "🔎 Penjelasan Object Detection",
     "📤 Upload File ke ESP32",
-    "🤖 Chatbot"
+    "🤖 Chatbot",
+]
 
-])
+# Tambahkan menu quiz & history jika login
+if st.session_state["is_logged_in"]:
+    menu_items.append("🧠 Quiz Challenge")
+    menu_items.append("📜 History Quiz")
 
-# ====================
-# MAIN LOGIC
-# ====================
+# Tambahkan menu login/logout di akhir
+menu_items.append("👤 Login")
+
+# Pilih menu
+menu = st.sidebar.radio("Pilih Halaman", menu_items)
+
+# Routing
 if menu == "📤 halaman_kit_esp32":
     halaman_kit_esp32()
 elif menu == "🔎 Penjelasan LED":
@@ -88,3 +109,9 @@ elif menu == "🔎 Penjelasan Object Detection":
     halaman_deteksi_sensor_dan_penjelasan()
 elif menu == "🤖 Chatbot":
     halaman_chatbot()
+elif menu == "🧠 Quiz Challenge":
+    halaman_quiz()
+elif menu == "📜 History Quiz":
+    halaman_history_quiz()
+elif menu == "👤 Login":
+    halaman_login()
