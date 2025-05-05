@@ -29,6 +29,9 @@ Setiap halaman membahas 1 topik sensor atau aktuator:
 - 🎯 **Tilt Sensor**
 - ⚫ **TCRT5000 (sensor garis)**
 - 📡 **TSOP1838 (IR receiver)**
+- 👤 **Login**
+- 🧠 **Quiz Challenge**
+- 📜 **History Quiz**
 
 ### 🤖 AI & IoT
 - 🔍 **Object Detection (AI)** – dengan model Roboflow (`halaman_deteksi_sensor_dan_penjelasan.py`)
@@ -140,6 +143,9 @@ edukit-web-app/
 ├── halaman_deteksi_sensor_dan_penjelasan.py
 ├── halaman_upload_file.py
 ├── halaman_chatbot.py
+├── halaman_history_quiz.py
+├── halaman_quiz.py
+├── halaman_login.py
 ├── assets/                   # Gambar sensor/komponen
 └── micropython/
     ├── main.py              # Untuk ESP32 (WiFi, OLED, Upload .py)
