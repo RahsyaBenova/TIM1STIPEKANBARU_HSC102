@@ -46,6 +46,7 @@ Setiap halaman membahas 1 topik sensor atau aktuator:
 - **OpenCV**, **gTTS**, **pygame**
 - **Roboflow Inference SDK** – deteksi objek AI
 - **Google Gemini API** – chatbot AI
+- **MongoDB** – Database
 - **ESP32** + MicroPython – kontrol sensor
 - **ESP32-CAM** – pengambilan gambar real-time via HTTP server
 
