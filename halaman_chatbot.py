@@ -3,7 +3,7 @@ import google.generativeai as genai
 
 def halaman_chatbot():
     st.title("🤖 Chatbot Kode ESP32 dengan Gemini")
-    st.markdown("Gunakan model **Gemini 1.5 Flash** untuk membuat atau menjelaskan kode ESP32 (MicroPython).")
+    st.markdown("Gunakan model **Gemini 2.5 Flash** untuk membuat atau menjelaskan kode ESP32 (MicroPython).")
 
     # Input API Key
     api_key = st.text_input("🔐 Masukkan API Key Gemini Anda:", type="password")
@@ -11,7 +11,7 @@ def halaman_chatbot():
     if api_key:
         try:
             genai.configure(api_key=api_key)
-            model = genai.GenerativeModel("gemini-1.5-flash")
+            model = genai.GenerativeModel("gemini-2.5-flash")
 
             # Input Prompt
             default_prompt = "Make a complete code of example turning on a LED using ESP32 with MicroPython code, just write as a text, without ```python"
