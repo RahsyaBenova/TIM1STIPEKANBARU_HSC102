@@ -8,3 +8,4 @@ pygame
 google-generativeai
 pymongo
 bcrypt
+opencv-python-headless
