@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
-import cv2
-import numpy as np
+# import cv2
+# import numpy as np
 import json
 from inference_sdk import InferenceHTTPClient
 from gtts import gTTS
@@ -54,8 +54,8 @@ def halaman_deteksi_sensor_dan_penjelasan():
         predictions = results_list[0].get('predictions', {}).get('predictions', []) if results_list else []
 
         # Tampilkan gambar asli
-        img_np = cv2.imdecode(np.frombuffer(img_bytes, np.uint8), -1)
-        st.image(img_np, caption="Gambar Asli dari ESP32", use_column_width=True)
+        # img_np = cv2.imdecode(np.frombuffer(img_bytes, np.uint8), -1)
+        st.image(img_bytes, caption="Gambar Asli dari ESP32", use_column_width=True)
 
         if not predictions:
             st.warning("🤷 Tidak ada objek yang terdeteksi.")
