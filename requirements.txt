@@ -8,3 +8,4 @@ google-generativeai
 pymongo
 bcrypt
 opencv-python-headless
+opencv-python
